@@ -1,14 +1,26 @@
 // src/components/NavBar.jsx
-import { Flex } from '@chakra-ui/react';
-import CartWidget from './CartWidget';
+import { Flex, Text } from "@chakra-ui/react";
+import CartWidget from "./CartWidget";
 
 const NavBar = () => {
   return (
-    <Flex justify="space-between" align="center" padding="10px" backgroundColor="lightgray">
-      <h1>MiTienda</h1>
-      <nav>
-        <a href="#">Inicio</a> | <a href="#">Productos</a> | <a href="#">Contacto</a>
-      </nav>
+    <Flex
+      alignItems="center"
+      justifyContent="space-between"
+      padding="10px 20px"
+      width="100vw"
+      bg="gray.100"
+    >
+      <Text fontSize="2xl" fontWeight="bold">
+        MiTienda
+      </Text>
+
+      <Flex gap="20px">
+        <Text cursor="pointer">Productos</Text>
+        <Text cursor="pointer">Nosotros</Text>
+        <Text cursor="pointer">Contacto</Text>
+      </Flex>
+
       <CartWidget />
     </Flex>
   );

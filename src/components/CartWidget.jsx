@@ -1,12 +1,12 @@
 // src/components/CartWidget.jsx
-import { Flex } from '@chakra-ui/react';
-import { FaShoppingCart } from 'react-icons/fa';
+import { Flex, Text } from "@chakra-ui/react";
+import { FaShoppingCart } from "react-icons/fa";
 
 const CartWidget = () => {
   return (
-    <Flex align="center">
-      <FaShoppingCart size={24} />
-      <span style={{ marginLeft: '5px' }}>3</span>
+    <Flex alignItems="center" cursor="pointer">
+      <FaShoppingCart size="25" />
+      <Text ml="5px" fontWeight="bold">0</Text>
     </Flex>
   );
 };
